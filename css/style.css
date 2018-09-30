@@ -107,12 +107,12 @@ a{
     /*background: url("../images/header.jpg") no-repeat 0 0 #000;
     background-size: contain;*/
     background: #000;
-    min-height: 85.2vh;
+    /*min-height: 85.2vh;*/
     max-height: 85.2vh;
     position: relative;
 }
 .banner img{
-    min-height: 85.2vh;
+    /*min-height: 85.2vh;*/
     max-height: 85.2vh;
 }
 .prev-arrow,
@@ -313,7 +313,9 @@ a{
 
 .portfolio-category{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    padding-top: 15px;
 }
 .portfolio-category li{
     padding-left: 10px;
@@ -862,13 +864,14 @@ a{
 }
 .advertising-content-inner{
     display: flex;
-    flex-wrap: wrap;
 }
 .advertising-left-icon{
-    width: 25%;
+    width: 140px;
+    flex-shrink: 0;
+    padding-right: 15px;
 }
 .advertising-right-content{
-    width: 75%;
+    flex-grow: 1;
     padding-bottom: 15px;
 }
 .advertising-right-content ul{
@@ -1060,6 +1063,7 @@ ul.bullet-list li{
     }
     .service-block {
         width: 100%;
+        padding-bottom: 20px;
     }
     .case-study-content{
         flex-wrap: wrap;
@@ -1083,5 +1087,43 @@ ul.bullet-list li{
     .top-panel-inner .top-contact-info{
         text-align: center;
         padding-top: 15px;
+    }
+}
+@media(max-width:560px){
+    .portfolio-content{
+        justify-content: center;
+    }
+    .portfolio-content .portfolio-block{
+        width: 31%;
+    }
+    .about-pic{
+        width: 100px;
+    }
+    .service-pic{
+        width: 100px;
+    }
+    .our-wins-pic{
+        width: 100px;
+    }
+    .our-wins-block{
+        padding-bottom: 15px;
+    }
+    .social-links ul li{
+        width: 31px;
+        height: 31px;
+    }
+    .advertising-left-icon{
+        width: 100px;
+    }
+}
+@media(max-width:480px){
+    .readings-post-block{
+        width: 90px;
+    }
+    .inner-banner img{
+        width: 80%;
+    }
+    .our-services-block{
+        width: 40%;
     }
 }
